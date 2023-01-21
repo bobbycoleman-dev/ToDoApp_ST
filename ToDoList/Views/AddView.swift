@@ -11,7 +11,7 @@ struct AddView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var listViewModel: ListViewModel
-    private var backgroundColor = Color(#colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1))
+    private var backgroundColor = Color(UIColor.secondarySystemBackground)
     @State var textFieldText: String = ""
     
     @State var alertTitle: String = ""
@@ -20,7 +20,7 @@ struct AddView: View {
     var body: some View {
         ScrollView {
             VStack {
-                TextField("Type something here", text: $textFieldText)
+                TextField("Type something here...", text: $textFieldText)
                     .padding(.horizontal)
                     .frame(height: 55)
                     .background(backgroundColor)
